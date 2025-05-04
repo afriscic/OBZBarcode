@@ -1,0 +1,33 @@
+# Use the .NET SDK image for building the app
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /source
+
+# Install git to clone the repository
+RUN apt-get update && apt-get install -y git
+
+# Clone the repository
+RUN git clone https://github.com/afriscic/OBZBarcode.git
+
+# Restore dependencies and build the app
+RUN dotnet restore
+RUN dotnet publish -c Release -o /app
+
+# Create the runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
+WORKDIR /app
+
+# Copy the published app from the build image
+COPY --from=build /app .
+
+# Create directory for mounted data volume
+RUN mkdir -p /app/data
+
+# Set environment variables for the app
+ENV USERNAME=""
+ENV PASSWORD=""
+
+# Expose the port your app will run on (adjust as needed)
+EXPOSE 8080
+
+# Set entry point
+ENTRYPOINT ["dotnet", "OBZBarcodeServer.dll"]
