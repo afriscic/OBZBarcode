@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y git
 # Clone the repository
 ARG REPO_URL
 RUN git clone ${REPO_URL} .
+RUN git pull
 
 # Restore dependencies and build the app
 WORKDIR /source/OBZBarcodeServer
