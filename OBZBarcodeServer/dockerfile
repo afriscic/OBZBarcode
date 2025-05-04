@@ -6,9 +6,11 @@ WORKDIR /source
 RUN apt-get update && apt-get install -y git
 
 # Clone the repository
-RUN git clone https://github.com/afriscic/OBZBarcode.git
+ARG REPO_URL
+RUN git clone ${REPO_URL} .
 
 # Restore dependencies and build the app
+WORKDIR /source/OBZBarcodeServer
 RUN dotnet restore
 RUN dotnet publish -c Release -o /app
 
@@ -23,8 +25,8 @@ COPY --from=build /app .
 RUN mkdir -p /app/data
 
 # Set environment variables for the app
-ENV USERNAME=""
-ENV PASSWORD=""
+ENV TEST_USERNAME=""
+ENV TEST_PASSWORD=""
 
 # Expose the port your app will run on (adjust as needed)
 EXPOSE 8080

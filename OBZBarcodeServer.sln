@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBZBarcodeTest", "OBZBarcod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBZBarcodeScan", "OBZBarcodeScan\OBZBarcodeScan.csproj", "{A4B0A0EC-E8F2-465D-ABE2-AAEF2D407F6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBZBarcodeTray", "OBZBarcodeTray\OBZBarcodeTray.csproj", "{90841369-1A26-49E0-8A97-BFA83ADFE5DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,8 +57,23 @@ Global
 		{A4B0A0EC-E8F2-465D-ABE2-AAEF2D407F6D}.Release|x64.Build.0 = Release|Any CPU
 		{A4B0A0EC-E8F2-465D-ABE2-AAEF2D407F6D}.Release|x86.ActiveCfg = Release|Any CPU
 		{A4B0A0EC-E8F2-465D-ABE2-AAEF2D407F6D}.Release|x86.Build.0 = Release|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Debug|x64.Build.0 = Debug|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Release|x64.ActiveCfg = Release|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Release|x64.Build.0 = Release|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{90841369-1A26-49E0-8A97-BFA83ADFE5DE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BE8C2C8-05C1-4ABA-A5DE-E2498877CB84}
 	EndGlobalSection
 EndGlobal

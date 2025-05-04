@@ -7,7 +7,7 @@ using SQLite;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton(new ConnectedEndpoints());
-builder.Services.AddSingleton(new DataRepository("Data/app.db"));
+builder.Services.AddSingleton(new DataRepository("data/app.db"));
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
 {
